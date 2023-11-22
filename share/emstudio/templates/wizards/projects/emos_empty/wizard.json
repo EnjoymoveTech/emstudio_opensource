@@ -1,0 +1,99 @@
+{
+    "version": 1,
+    "supportedProjectTypes": [ "CMakeProjectManager.CMakeProject", "Qbs.QbsProject", "Qt4ProjectManager.Qt4Project" ],
+    "id": "E.EmosEmpty",
+    "category": "D.EmosEmpty",
+    "trDescription": "Creates a empty emos project containing a single *.emos file with a stub implementation.",
+    "trDisplayName": "Emos Empty Project",
+    "trDisplayCategory": "Emos Empty Project",
+    "icon": "../../global/consoleapplication.png",
+    "featuresRequired": [ "QtSupport.Wizards.FeatureQt" ],
+    "enabled": "%{JS: value('Plugins').indexOf('EmosProjectManager') >= 0}",
+
+    "options":
+    [
+        { "key": "ProjectFile", "value": "%{JS: value('BuildSystem') === 'qmake' ? value('ProFile') : (value('BuildSystem') === 'cmake' ? value('CMakeFile') : value('QbsFile'))}" },
+        { "key": "ProFile", "value": "%{JS: Util.fileName(value('ProjectDirectory') + '/' + value('ProjectName'), 'emos')}" },
+        { "key": "QbsFile", "value": "%{JS: Util.fileName(value('ProjectDirectory') + '/' + value('ProjectName'), 'qbs')}" },
+        { "key": "CMakeFile", "value": "%{ProjectDirectory}/CMakeLists.txt" },
+        { "key": "HasTranslation", "value": "%{JS: value('TsFileName') !== ''}" },
+        { "key": "CppFileName", "value": "%{JS: 'main.' + Util.preferredSuffix('text/x-c++src')}" },
+        { "key": "SchFileName", "value": "%{JS: 'scheduler.' + Util.preferredSuffix('application/emos.sch.xml')}" },
+        { "key": "CfvFile", "value": "%{JS: Util.fileName(value('ProjectDirectory') + '/3_architecture_design/' + value('ProjectName'), 'cfv')}" }
+    ],
+
+    "pages":
+    [
+        {
+            "trDisplayName": "Project Location",
+            "trShortTitle": "Location",
+            "typeId": "Project",
+            "data": { "trDescription": "This wizard creates a simple Qt-based console application." }
+        }
+    ],
+    "generators":
+    [
+        {
+            "typeId": "File",
+            "data":
+            [
+                {
+                    "source": "file.emos",
+                    "target": "%{ProFile}",
+                    "openAsProject": true
+                },
+                {
+                    "source": "1_interface_design/1_interface_design.emosi",
+                    "openAsProject": false
+                },
+                {
+                    "source": "2_component_design/2_component_design.emosi",
+                    "openAsProject": false
+                },
+                {
+                    "source": "3_architecture_design/3_architecture_design.emosi",
+                    "openAsProject": false
+                },
+                {
+                    "source": "schedule_configuration/schedule_configuration.emosi",
+                    "openAsProject": false
+                },
+                {
+                    "source": "config/config.emosi",
+                    "openAsProject": false
+                },
+                {
+                    "source": "1_interface_design/api.description",
+                    "openAsProject": false
+                },
+                {
+                    "source": "1_interface_design/type.description",
+                    "openAsProject": false
+                },
+                {
+                    "source": "3_architecture_design/sample.cfv",
+                    "target": "%{CfvFile}",
+                    "openAsProject": false
+                },
+                {
+                    "source": "config/statecfg.scxml",
+                    "openAsProject": false
+                },
+                {
+                    "source": "config/struct.h",
+                    "openAsProject": false
+                },
+                {
+                    "source": "config/DataDetails.xlsx",
+                    "openAsProject": false,
+                    "isBinary": true
+                },
+                {
+                    "source": "config/DataDetails_FullTypes.xlsx",
+                    "openAsProject": false,
+                    "isBinary": true
+                }
+            ]
+        }
+    ]
+}

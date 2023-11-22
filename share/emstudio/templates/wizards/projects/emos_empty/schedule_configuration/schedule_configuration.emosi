@@ -1,0 +1,3 @@
+VERSION = 1
+
+CONTENTS += schedule_configuration/*.sch

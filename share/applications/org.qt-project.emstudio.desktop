@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Exec=emstudio %F
+Name=Qt Creator
+GenericName=C++ IDE for developing Qt applications
+X-KDE-StartupNotify=true
+Icon=EmStudio-emstudio
+StartupWMClass=emstudio
+Terminal=false
+Categories=Development;IDE;Qt;
+MimeType= text/x-c++src;text/x-c++hdr;text/x-xsrc;application/x-designer;application/vnd.qt.qmakeprofile;application/vnd.qt.xml.resource;
+

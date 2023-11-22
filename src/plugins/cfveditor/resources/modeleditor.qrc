@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/modeleditor">
+        <file>up.png</file>
+        <file>event.png</file>
+        <file>field.png</file>
+        <file>method.png</file>
+        <file>pin.png</file>
+    </qresource>
+</RCC>

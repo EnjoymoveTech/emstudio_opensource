@@ -1,0 +1,42 @@
+{
+    "version": 1,
+    "supportedProjectTypes": [ ],
+    "id": "C.Idl",
+    "category": "O.Idl",
+    "trDescription": "Creates a Idl file that you can add to a Emos project.",
+    "trDisplayName": "Idl File",
+    "trDisplayCategory": "Idl File",
+    "iconText": "h",
+    "enabled": "%{JS: value('Plugins').indexOf('IdlEditor') >= 0}",
+
+    "options": [
+    { "key": "FilePath", "value": "%{JS: Util.fileName(value('TargetPath'), Util.preferredSuffix('application/emos.idl.xml'))}" },
+    { "key": "FileName", "value": "%{JS: value('FileName')}" }
+    ],
+
+    "pages" :
+    [
+        {
+            "trDisplayName": "Location",
+            "trShortTitle": "Location",
+            "typeId": "File"
+        },
+        {
+            "trDisplayName": "Project Management",
+            "trShortTitle": "Summary",
+            "typeId": "Summary"
+        }
+    ],
+    "generators" :
+    [
+        {
+            "typeId": "File",
+            "data":
+            {
+                "source": "sample.idl",
+                "target": "%{FilePath}",
+                "openInEditor": true
+            }
+        }
+    ]
+}

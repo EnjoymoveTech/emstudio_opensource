@@ -1,0 +1,72 @@
+<emos:srv xmlns:emos="emos">
+        <Module name="ServiceDiscovery" comp="sd.comp" oid="oid.emos.core.service_discovery" alias="service_discovery" type="sd" checked="true" show="true" priority="100">
+                <Property value="" name="strSdMultiAddress" type="String" dvalue="224.1.1.11" isFixed="false" category="normal"/>
+                <Property value="{{ip}}" name="strAddress" type="String" dvalue="" isFixed="true" category="normal"/>
+                <Property value="" name="nSdPort" type="Int" dvalue="40005" isFixed="false" category="normal"/>
+                <Property value="{{processOnlyid}}" name="nClientID" type="Int" dvalue="" isFixed="true" category="normal"/>
+                <Property value="{{ecuid}}" name="nEcuID" type="Int" dvalue="" isFixed="true" category="normal"/>
+        </Module>
+        <Module name="ExecutionManagementClient" comp="emcli.comp" oid="oid.emos.core.emcli" alias="emcli" type="mgr" checked="false" show="true" priority="10">
+          <Property value="{{processOnlyid}}" name="nEmcliInstanceID" type="Int" dvalue="" isFixed="true" category="normal"/>
+      <Property value="{{processName}}" name="strProcessName" type="String" dvalue="1" isFixed="true" category="normal"/>
+      <Property value="{{ip}}" name="strAddress" type="String" dvalue="127.0.0.1" isFixed="true" category="normal"/>
+      <Property value="" name="nEmcliPort" type="Int" dvalue="41005" isFixed="false" category="normal"/>
+      <Property value="{{ecuid}}" name="nEcuID" type="Int" dvalue="1" isFixed="true" category="normal"/>
+        </Module>
+        <Module name="ExecutionManagementHost" comp="emhost.comp" oid="oid.emos.core.emhost" alias="emhost" type="mgr" checked="false" show="false" priority="10">
+          <Property value="" name="nEmhostInstanceId" type="Int" dvalue="1" isFixed="false" category="normal"/>
+      <Property value="" name="strAddress" type="String" dvalue="127.0.0.1" isFixed="false" category="normal"/>
+      <Property value="" name="nEmhostPort" type="Int" dvalue="42005" isFixed="false" category="normal"/>
+      <Property value="" name="nEmhostProtocol" type="Int" dvalue="1" isFixed="false" category="normal"/>
+          <Property value="" name="nEmhostType" type="Int" dvalue="2" isFixed="false" category="normal"/>
+        </Module>
+        <Module name="ExecutionManagementHostProxy" comp="emhostproxy.comp" oid="oid.emos.core.emhostproxy" alias="emhostproxy" type="mgr" checked="false" show="false" priority="10">
+          <Property value="" name="nEmhostInstanceId" type="Int" dvalue="1" isFixed="false" category="normal"/>
+      <Property value="" name="strAddress" type="String" dvalue="127.0.0.1" isFixed="false" category="normal"/>
+      <Property value="" name="nEmhostPort" type="Int" dvalue="43005" isFixed="false" category="normal"/>
+      <Property value="" name="nEmhostProtocol" type="Int" dvalue="1" isFixed="false" category="normal"/>
+          <Property value="" name="nEmhostType" type="Int" dvalue="2" isFixed="false" category="normal"/>
+        </Module>
+        <Module name="ExecutionManagementOperate" comp="emoprt.comp" oid="oid.emos.core.emoprt" alias="emoprt" type="mgr" checked="false" show="false" priority="10">
+          <Property value="" name="nEmoprtInstanceId" type="Int" dvalue="1" isFixed="false" category="normal"/>
+      <Property value="" name="strAddress" type="String" dvalue="127.0.0.1" isFixed="false" category="normal"/>
+      <Property value="" name="nEmoprtPort" type="Int" dvalue="44005" isFixed="false" category="normal"/>
+      <Property value="1" name="nEmoprtProtocol" type="Int" dvalue="1" isFixed="true" category="normal"/>
+          <Property value="2" name="nEmoprtType" type="Int" dvalue="2" isFixed="true" category="normal"/>
+          <Property value="{{ecuid}}" name="nEcuID" type="Int" dvalue="1" isFixed="true" category="normal"/>
+        </Module>
+        <Module name="StateManagement" comp="statemanagement.comp" oid="oid.emos.core.statemanagement" alias="statemanagement" type="mgr" checked="false" show="false" priority="10">
+          <Property value="1" name="nStateManagementInstanceId" type="Int" dvalue="1" isFixed="true" category="normal"/>
+      <Property value="{{ip}}" name="strAddress" type="String" dvalue="127.0.0.1" isFixed="true" category="normal"/>
+      <Property value="" name="nStateManagementPort" type="Int" dvalue="45005" isFixed="false" category="normal"/>
+      <Property value="1" name="nStateManagementProtocol" type="Int" dvalue="1" isFixed="true" category="normal"/>
+          <Property value="2" name="nStateManagementType" type="Int" dvalue="2" isFixed="true" category="normal"/>
+        </Module>
+        <Module name="StateManagementProxy" comp="statemanagementproxy.comp" oid="oid.emos.core.statemanagementproxy" alias="statemanagementproxy" type="mgr" checked="false" show="true" priority="10">
+          <Property value="1" name="nStateManagementInstanceId" type="Int" dvalue="1" isFixed="true" category="normal"/>
+      <Property value="{{ip}}" name="strAddress" type="String" dvalue="127.0.0.1" isFixed="true" category="normal"/>
+      <Property value="" name="nStateManagementPort" type="Int" dvalue="46005" isFixed="false" category="normal"/>
+      <Property value="1" name="nStateManagementProtocol" type="Int" dvalue="1" isFixed="true" category="normal"/>
+          <Property value="2" name="nStateManagementType" type="Int" dvalue="2" isFixed="true" category="normal"/>
+        </Module>
+        <Module name="Deployment" comp="deployment.comp" oid="oid.emos.sdk.deployment" alias="deployment" type="mgr" checked="false" show="true" priority="9">
+          <Property value="{{processOnlyid}}" name="nDeploymentInstanceID" type="Int" dvalue="" isFixed="true" category="normal"/>
+          <Property value="deployment" name="Deploymentalias" type="String" dvalue="" isFixed="true" category="normal"/>
+          <Property value="{{ip}}" name="strAddress" type="String" dvalue="127.0.0.1" isFixed="true" category="normal"/>
+          <Property value="" name="nDeploymentPort" type="Int" dvalue="45015" isFixed="false" category="normal"/>
+          <Property value="1" name="nDeploymentProtocol" type="Int" dvalue="1" isFixed="true" category="normal"/>
+          <Property value="2" name="nDeploymentType" type="Int" dvalue="2" isFixed="true" category="normal"/>
+          <Property value="" name="strDeviceName" type="String" dvalue="TDA4(152)" isFixed="false" category="normal"/>
+          <Property value="" name="nDeviceType" type="Int" dvalue="2" isFixed="false" category="normal"/>
+          <Property value="" name="nEcuId" type="Int" dvalue="2" isFixed="false" category="normal"/>
+          <Property value="" name="strFilePath" type="String" dvalue="D:/temp" isFixed="false" category="normal"/>
+        </Module>
+        <Module name="DeploymentProxy" comp="deploymentproxy.comp" oid="oid.emos.sdk.deploymentprox" alias="deploymentprox" type="mgr" checked="false" show="true" priority="9">
+          <Property value="{{processOnlyid}}" name="nDeploymentInstanceID" type="Int" dvalue="" isFixed="true" category="normal"/>
+          <Property value="deployment" name="Deploymentalias" type="String" dvalue="" isFixed="true" category="normal"/>
+          <Property value="{{ip}}" name="strAddress" type="String" dvalue="127.0.0.1" isFixed="true" category="normal"/>
+          <Property value="" name="nDeploymentPort" type="Int" dvalue="45016" isFixed="false" category="normal"/>
+          <Property value="1" name="nDeploymentProtocol" type="Int" dvalue="1" isFixed="true" category="normal"/>
+          <Property value="2" name="nDeploymentType" type="Int" dvalue="2" isFixed="true" category="normal"/>
+        </Module>
+</emos:srv>

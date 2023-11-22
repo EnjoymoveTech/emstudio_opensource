@@ -1,0 +1,3 @@
+VERSION = 1
+
+CONTENTS += 3_architecture_design/*.cfv

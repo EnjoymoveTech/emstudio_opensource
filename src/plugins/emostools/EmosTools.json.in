@@ -1,0 +1,11 @@
+{
+    \"Name\" : \"EmosTools\",
+    \"Version\" : \"$$EMSTUDIO_VERSION\",
+    \"CompatVersion\" : \"$$EMSTUDIO_VERSION\",
+    \"Vendor\" : \"EnjoyMove\",
+    \"Copyright\" : \"(C) EnjoyMove\",
+    \"License\" : \"\",
+    \"Description\" : \"Emos Tools\",
+    \"Url\" : \"https://www.enjoymove.com\",
+    $$dependencyList
+}

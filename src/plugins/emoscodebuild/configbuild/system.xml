@@ -1,0 +1,103 @@
+<emos:project xmlns:emos="emos">
+	<configurations>
+		<configuration url="udp://localhost:10001" name="Master" description="The master for the message bus.">
+			<graph>
+				<comp priority="2" alias="service_discovery" idref="oid.emos.core.service_discovery">
+					<settings>
+						<property type="Int" value="1" name="nClientID"/><!-- 所有唯一 -->
+						<property type="Int" value="1" name="nEcuID"/><!-- 板子id -->
+						<property type="Int" value="40005" name="nSdPort"/><!-- 设备内唯一 -->
+						<property type="String" value="127.0.0.1" name="strAddress"/>
+						<!-- <property type="String" value="C:\Users\haojie.fang\Documents\untitled11\CodeRoot/em_swc/sample_cfv/em_swc/build_out/neo/" name="strConfigPath"/> -->
+						<property type="String" value="224.1.1.11" name="strSdMultiAddress"/>
+					</settings>
+				</comp>
+				<comp priority="2" alias="emcli" idref="oid.emos.core.emcli">
+					<settings>
+						<property type="Int" value="2" name="nEcuID"/><!-- 板子id -->
+						<property type="Int" value="1" name="nEmcliInstanceID"/><!-- 所有唯一 -->
+						<property type="Int" value="61002" name="nEmcliPort"/><!-- 设备内唯一 -->
+						<property type="String" value="127.0.0.1" name="strAddress"/>
+						<property type="String" value="Master" name="strProcessName"/><!-- 进程名 -->
+					</settings>
+				</comp>
+				<comp priority="2" alias="emhost" idref="oid.emos.core.emhost">
+					<settings>
+						<!-- <property type="String" value="emhost" name="Emhostalias"/> -->
+						<property type="Int" value="1" name="nEmhostInstanceId"/>
+						<property type="Int" value="61002" name="nEmhostPort"/>
+						<property type="Int" value="1" name="nEmhostProtocol"/>
+						<property type="Int" value="2" name="nEmhostType"/>
+						<property type="String" value="127.0.0.1" name="strAddress"/>
+					</settings>
+				</comp>
+				<comp alias="emhostproxy" priority="2" idref="oid.emos.core.emhostproxy">
+					<settings>
+						<!-- <property type="String" value="emhost" name="Emhostalias"/> -->
+						<property type="Int" value="1" name="nEmhostInstanceId"/>
+						<property type="Int" value="61002" name="nEmhostPort"/>
+						<property type="Int" value="1" name="nEmhostProtocol"/>
+						<property type="Int" value="2" name="nEmhostType"/>
+						<property type="String" value="127.0.0.1" name="strAddress"/>
+					</settings>
+				</comp>	
+				<comp priority="2" alias="emoprt" idref="oid.emos.core.emoprt">
+					<settings>
+						<!-- <property type="String" value="emoprt" name="Emoprtalias"/> -->
+						<property type="Int" value="1" name="nEmoprtInstanceId"/><!-- 同ECUID -->
+						<property type="Int" value="61002" name="nEmoprtPort"/>
+						<property type="Int" value="1" name="nEmoprtProtocol"/>
+						<property type="Int" value="2" name="nEmoprtType"/>
+						<property type="String" value="127.0.0.1" name="strAddress"/>
+					</settings>
+				</comp>
+				<comp priority="2" alias="statemanagement" idref="oid.emos.core.statemanagement">
+					<settings>
+						<!-- <property type="String" value="statemanagement" name="StateManagementalias"/> -->
+						<property type="Int" value="1" name="nStateManagementInstanceId"/><!-- 固定1 -->
+						<property type="Int" value="61002" name="nStateManagementPort"/>
+						<property type="Int" value="1" name="nStateManagementProtocol"/>
+						<property type="Int" value="2" name="nStateManagementType"/>
+						<property type="String" value="127.0.0.1" name="strAddress"/>
+					</settings>
+				</comp>
+				<comp alias="statemanagementproxy" priority="2" idref="oid.emos.core.statemanagementproxy">
+					<settings>
+						<!-- <property type="String" value="statemanagement" name="StateManagementalias"/> -->
+						<property type="Int" value="1" name="nStateManagementInstanceId"/><!-- 固定1 -->
+						<property type="Int" value="61002" name="nStateManagementPort"/>
+						<property type="Int" value="1" name="nStateManagementProtocol"/>
+						<property type="Int" value="2" name="nStateManagementType"/>
+						<property type="String" value="127.0.0.1" name="strAddress"/>
+					</settings>
+				</comp>
+				<comp priority="2" alias="calculator" idref="oid.emos.sdk.calculator">
+					<settings>
+						<property type="Int" value="1" name="nCalculatorInstanceID"/>
+						<property type="String" value="calculator" name="Calculatoralias"/>
+						<property type="String" value="127.0.0.1" name="strAddress"/>
+						<property type="Int" value="42256" name="nCalculatorPort"/>
+						<property type="Int" value="1" name="nCalculatorProtocol"/>
+						<property type="Int" value="2" name="nCalculatorType"/>
+					</settings>
+				</comp>
+				<comp priority="2" alias="testclient" idref="oid.emos.sdk.testclient">
+					<settings>
+						<property type="String" value="calculator" name="Calculatoraliasskel"/>
+						<property type="String" value="" name="Calculatoraliasprox"/>
+					</settings>
+				</comp>
+				<comp priority="2" alias="calculatorprox" idref="oid.emos.sdk.calculatorprox">
+					<settings>
+						<property type="Int" value="1" name="nCalculatorInstanceID"/>
+						<property type="String" value="calculator" name="Calculatoralias"/>
+						<property type="String" value="127.0.0.1" name="strAddress"/>
+						<property type="Int" value="42256" name="nCalculatorPort"/>
+						<property type="Int" value="1" name="nCalculatorProtocol"/>
+						<property type="Int" value="2" name="nCalculatorType"/>
+					</settings>
+				</comp>
+			</graph>
+		</configuration>
+	</configurations>
+</emos:project>

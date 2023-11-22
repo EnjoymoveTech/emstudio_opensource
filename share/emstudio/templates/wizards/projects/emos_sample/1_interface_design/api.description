@@ -1,0 +1,45 @@
+
+<emos:ddl xmlns:emos="emos">
+    <header>
+        <version>1.0</version>
+        <author>EMOS</author>
+        <date_creation>2022-12-22</date_creation>
+        <date_change>2022-12-22</date_change>
+        <description>NULL</description>
+        <typename>type</typename>
+    </header>
+    <services>
+        <service id="1" inprocess="0" interface_type="cpp" name="CalculatorI" version="1">
+            <element id="1" name="Add" ret="tResult" type="Method">
+                <para direction="0" name="p1" size="0" type="tInt64" version="1"/>
+                <para direction="0" name="p2" size="0" type="tInt64" version="1"/>
+            </element>
+            <element id="2" name="Sub" ret="tResult" type="Method">
+                <para direction="0" name="p1" size="0" type="tInt32" version="1"/>
+                <para direction="0" name="p2" size="0" type="tInt32" version="1"/>
+            </element>
+            <element data="tInt64" groupid="1" id="1" name="CalEvent" type="Event"/>
+            <element data="tInt64" id="8192" name="CalPin" type="Pin"/>
+        </service>
+        <service id="2" inprocess="0" interface_type="cpp" name="CalculatorII" version="1">
+            <element id="1" name="Mul" ret="tFloat64" type="Method">
+                <para direction="0" name="f64Para0" size="0" type="const tFloat64" version="1"/>
+                <para direction="0" name="f64Para1" size="0" type="const tFloat64" version="1"/>
+            </element>
+            <element id="2" name="Div" ret="tFloat64" type="Method">
+                <para direction="2" name="f64Para0" size="0" type="tFloat64*" version="1"/>
+                <para direction="2" name="f64Para1" size="0" type="tFloat64*" version="1"/>
+            </element>
+            <element data="tInt32" groupid="1" id="1" name="CalEvent2" type="Event"/>
+            <element data="tInt32" id="8192" name="CalPin2" type="Pin"/>
+        </service>
+        <service id="3" inprocess="0" interface_type="c" name="CalculatorIII" version="1">
+            <element id="1" name="AddObject" ret="ObjectResult" type="Method">
+                <para direction="0" name="sPara0" size="0" type="ObjectResult" version="1"/>
+                <para direction="0" name="sPara1" size="0" type="ObjectResult" version="1"/>
+            </element>
+            <element data="ObjectResult" groupid="1" id="1" name="CalEvent3" type="Event"/>
+            <element data="ObjectResult" id="8192" name="CalPin3" type="Pin"/>
+        </service>
+    </services>
+</emos:ddl>

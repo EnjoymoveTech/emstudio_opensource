@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="System"?>
+<emos:ddl xmlns:emos="emos">
+    <header>
+        <version>1.0</version>
+        <author>EMOS</author>
+        <date_creation>8-07-2022</date_creation>
+        <date_change/>
+        <description>For test</description>
+    </header>
+    <datatypes>
+        <datatype size="8" description="predefined  tUInt8 datatype" name="tUInt8"/>
+        <datatype size="8" description="predefined  tInt8 datatype" name="tInt8"/>
+        <datatype size="16" description="predefined  tUInt16 datatype" name="tUInt16"/>
+        <datatype size="16" description="predefined  tInt16 datatype" name="tInt16"/>
+        <datatype size="32" description="predefined  tUInt32 datatype" name="tUInt32"/>
+        <datatype size="32" description="predefined  tInt32 datatype" name="tInt32"/>
+        <datatype size="64" description="predefined  tUInt64 datatype" name="tUInt64"/>
+        <datatype size="64" description="predefined  tInt64 datatype" name="tInt64"/>
+        <datatype size="32" description="predefined  tFloat32 datatype" name="tFloat32"/>
+        <datatype size="64" description="predefined  tFloat64 datatype" name="tFloat64"/>
+        <datatype size="128" description="predefined  tFloat128 datatype" name="tFloat128"/>
+        <datatype size="8" description="predefined  tBool datatype" name="tBool"/>
+        <datatype size="8" description="predefined  tChar datatype" name="tChar"/>
+        <datatype size="0" description="predefined  tVoid datatype" name="tVoid"/>
+        <datatype size="64" description="predefined  tFileSize datatype" name="tFileSize"/>
+        <datatype size="64" description="predefined  tFilePos datatype" name="tFilePos"/>
+        <datatype size="32" description="predefined  tSHandle datatype" name="tSHandle"/>
+        <datatype size="32" description="predefined  EM_ExitCode datatype" name="EM_ExitCode"/>
+        <datatype size="32" description="predefined  tResult datatype" name="tResult"/>
+        <datatype size="64" description="predefined  tTimeStamp datatype" name="tTimeStamp"/>
+        <datatype size="64" description="predefined  tSize datatype" name="tSize"/>
+    </datatypes>
+    <streams/>
+    <enums/>
+    <macros/>
+    <structs/>
+    <typedefs/>
+    <includes text=""/>
+</emos:ddl>

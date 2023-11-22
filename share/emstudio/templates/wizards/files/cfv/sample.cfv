@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qmt>
+ <project>
+  <uid>{02418ac6-571a-4733-a64e-2c755b75fa9f}</uid>
+  <root-package>
+   <instance>
+    <MPackage>
+     <base-MObject>
+      <MObject>
+       <base-MElement>
+        <MElement>
+         <uid>{921babe2-a06e-47e0-b395-33ac748837a4}</uid>
+        </MElement>
+       </base-MElement>
+       <name>Scratch</name>
+       <children>
+        <handles>
+         <handles>
+          <qlist>
+           <item>
+            <handle>
+             <uid>{283c2c51-0a7f-41bc-a948-68bba8222068}</uid>
+             <target>
+              <instance type="MCanvasDiagram">
+               <MCanvasDiagram>
+                <base-MDiagram>
+                 <MDiagram>
+                  <base-MObject>
+                   <MObject>
+                    <base-MElement>
+                     <MElement>
+                      <uid>{283c2c51-0a7f-41bc-a948-68bba8222068}</uid>
+                     </MElement>
+                    </base-MElement>
+                    <name>Scratch</name>
+                   </MObject>
+                  </base-MObject>
+                  <last-modified>1656496389406</last-modified>
+                  <toolbarid>emos.sdk</toolbarid>
+                 </MDiagram>
+                </base-MDiagram>
+               </MCanvasDiagram>
+              </instance>
+             </target>
+            </handle>
+           </item>
+          </qlist>
+         </handles>
+        </handles>
+       </children>
+      </MObject>
+     </base-MObject>
+    </MPackage>
+   </instance>
+  </root-package>
+ </project>
+</qmt>

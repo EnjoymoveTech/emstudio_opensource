@@ -1,0 +1,61 @@
+
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" binding="early" xmlns:qt="http://www.qt.io/2015/02/scxml-ext" name="sample" qt:editorversion="1.0.0">
+    <group id="fg1" GroupID="100">
+        <qt:editorinfo scenegeometry="827.19;698.47;689.78;169.25;353.57;375.33" geometry="827.19;698.47;-137.41;-529.22;353.57;375.33"/>
+        <final id="Final_3">
+            <qt:editorinfo scenegeometry="1037.80;457.11;1017.80;437.11;40.13;40" geometry="170.71;-268.98;-20;-20;40.13;40"/>
+        </final>
+        <initial>
+            <qt:editorinfo scenegeometry="1022.33;308.50;1002.33;288.50;40;40" geometry="155.24;-417.59;-20;-20;40;40"/>
+            <transition type="external" event="Transition_2" target="state1_1"/>
+        </initial>
+        <state id="state1_1" GroupID="101">
+            <qt:editorinfo scenegeometry="893.03;342.31;784.70;267.25;128.33;111.06" geometry="25.94;-383.78;-108.33;-75.06;128.33;111.06"/>
+            <transition type="external" event="Transition_5" target="state1_2">
+                <qt:editorinfo startTargetFactors="57.94;87.54" movePoint="-4.17;-30.38"/>
+            </transition>
+            <transition type="internal" event="J3"/>
+        </state>
+        <state id="state1_2" GroupID="102">
+            <qt:editorinfo scenegeometry="879.21;471.75;773.21;425.32;148.77;107.11" geometry="12.12;-254.34;-106;-46.43;148.77;107.11"/>
+            <transition type="external" event="Transition_1" target="state1_1">
+                <qt:editorinfo endTargetFactors="31.17;87.57" startTargetFactors="23.83;12.68"/>
+            </transition>
+            <transition type="external" event="Transition_2" target="Final_3"/>
+            <transition type="internal" event="TDA4"/>
+        </state>
+    </group>
+    <group id="MachineFG" GroupID="103">
+        <qt:editorinfo scenegeometry="374.41;256.05;137.02;190.22;361.44;362.03" geometry="374.41;256.05;-237.39;-65.83;361.44;362.03"/>
+        <state id="Restart" GroupID="104">
+            <qt:editorinfo scenegeometry="280.76;448.38;220.76;398.38;120;100" geometry="-82.39;219.31;-60;-50;120;100"/>
+            <transition type="external" event="Transition_1" target="Startup">
+                <qt:editorinfo endTargetFactors="33.94;89.59"/>
+            </transition>
+        </state>
+        <state id="Startup" GroupID="105">
+            <qt:editorinfo scenegeometry="380.80;274.96;240.20;224.96;120;100" geometry="17.65;45.89;-140.60;-50;120;100"/>
+            <transition type="external" event="Transition_2" target="Restart">
+                <qt:editorinfo endTargetFactors="64.01;8.42" movePoint="26.42;6"/>
+            </transition>
+            <transition type="external" event="Transition_3" target="Final_2">
+                <qt:editorinfo endTargetFactors="18.94;44.52"/>
+            </transition>
+        </state>
+        <initial>
+            <qt:editorinfo scenegeometry="165.76;269.11;145.76;249.11;40;40" geometry="-197.39;40.04;-20;-20;40;40"/>
+            <transition type="external" event="Transition_2" target="Startup">
+                <qt:editorinfo endTargetFactors="24.87;36.14"/>
+            </transition>
+        </initial>
+        <final id="Final_2">
+            <qt:editorinfo scenegeometry="424.63;272.17;404.63;252.17;40;40" geometry="61.48;43.10;-20;-20;40;40"/>
+        </final>
+    </group>
+    <AppList>
+        <appInfo name="SmHost" ecuIndex="1"/>
+        <appInfo name="J3" path="application_J3" ecuIndex="2"/>
+        <appInfo name="PC" path="application_PC" ecuIndex="3"/>
+        <appInfo name="TDA4" path="application_TDA4" ecuIndex="1"/>
+    </AppList>
+</scxml>

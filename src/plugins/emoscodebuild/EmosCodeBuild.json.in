@@ -1,0 +1,12 @@
+{
+    \"Name\" : \"EmosCodeBuild\",
+    \"Version\" : \"$$EMSTUDIO_VERSION\",
+    \"CompatVersion\" : \"$$EMSTUDIO_VERSION\",
+    \"Vendor\" : \"EnjoyMove\",
+    \"Copyright\" : \"(C) EnjoyMove\",
+    \"Category\" : \"EmStudio\",
+    \"License\" : \"\",
+    \"Description\" : \"Emos Code Build\",
+    \"Url\" : \"https://www.enjoymove.com\",
+    $$dependencyList
+}

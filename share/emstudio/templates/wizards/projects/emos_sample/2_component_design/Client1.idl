@@ -1,0 +1,15 @@
+
+<emos:idl oid="emos.sdk.client1" priority="10" project:name="Client1" version="1">
+    <QuoteService name="CalculatorI"/>
+    <QuoteService name="CalculatorII"/>
+    <QuoteService name="CalculatorIII"/>
+    <Thread data="1000" name="TestCallInprocI" type="Time"/>
+    <Thread data="1000" name="TestCallInprocII" type="Time"/>
+    <Thread data="1000" name="TestCallInprocIII" type="Time"/>
+    <Thread data="tInt64" name="Event" type="Event"/>
+    <Thread data="tInt32" name="Event2" type="Event"/>
+    <Thread data="ObjectResult" name="Event3" type="Event"/>
+    <Thread data="tInt64" name="Pin" type="Data"/>
+    <Thread data="tInt32" name="Pin2" type="Data"/>
+    <Thread data="ObjectResult" name="Pin3" type="Data"/>
+</emos:idl>

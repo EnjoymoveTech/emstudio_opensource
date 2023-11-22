@@ -1,0 +1,2 @@
+<emos:idl oid="emos.sdk.%{JS: value('FileName').toLowerCase()}" project:name="%{FileName}">
+</emos:idl>

@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "supportedProjectTypes": [ ],
+    "id": "C.Cfv",
+    "category": "O.Cfv",
+    "trDescription": "Creates a Cfv file that you can add to a Emos project.",
+    "trDisplayName": "Cfv File",
+    "trDisplayCategory": "Cfv File",
+    "iconText": "h",
+    "enabled": "%{JS: value('Plugins').indexOf('Cfveditor') >= 0}",
+    "options": [
+    { "key": "FilePath", "value": "%{JS: Util.fileName(value('TargetPath'), Util.preferredSuffix('application/emos.cfv.model'))}" },
+    { "key": "FileName", "value": "%{JS: value('FileName')}" }
+    ],
+
+    "pages" :
+    [
+        {
+            "trDisplayName": "Location",
+            "trShortTitle": "Location",
+            "typeId": "File"
+        },
+        {
+            "trDisplayName": "Project Management",
+            "trShortTitle": "Summary",
+            "typeId": "Summary"
+        }
+    ],
+    "generators" :
+    [
+        {
+            "typeId": "File",
+            "data":
+            {
+                "source": "sample.cfv",
+                "target": "%{FilePath}",
+                "openInEditor": true
+            }
+        }
+    ]
+}

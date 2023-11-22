@@ -1,0 +1,7 @@
+VERSION = 1
+
+include(1_interface_design/1_interface_design.emosi)
+include(2_component_design/2_component_design.emosi)
+include(3_architecture_design/3_architecture_design.emosi)
+include(schedule_configuration/schedule_configuration.emosi)
+include(config/config.emosi)

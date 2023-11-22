@@ -1,0 +1,23 @@
+{
+    \"Name\" : \"Cfveditor\",
+    \"Version\" : \"$$EMSTUDIO_VERSION\",
+    \"CompatVersion\" : \"$$EMSTUDIO_COMPAT_VERSION\",
+    \"Vendor\" : \"EnjoyMove\",
+    \"Copyright\" : \"(C) EnjoyMove\",
+    \"License\" : \"\",
+    \"Category\" : \"EmStudio\",
+    \"Description\" : \"Cfv.\",
+    \"Url\" : \"http://www.enjoymove.com\",
+    $$dependencyList,
+
+    \"Mimetypes\" : [
+        \"<?xml version=\'1.0\' encoding=\'UTF-8\'?>\",
+        \"<mime-info xmlns=\'http://www.freedesktop.org/standards/shared-mime-info\'>\",
+        \"    <mime-type type=\'application/emos.cfv.model\'>\",
+        \"        <sub-class-of type=\'text/xml\'/>\",
+        \"        <comment>Qt Cfv Model File</comment>\",
+        \"        <glob pattern=\'*.cfv\'/>\",
+        \"    </mime-type>\",
+        \"</mime-info>\"
+    ]
+}

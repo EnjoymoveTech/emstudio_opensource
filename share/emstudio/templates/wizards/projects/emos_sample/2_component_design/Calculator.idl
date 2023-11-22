@@ -1,0 +1,11 @@
+<emos:idl oid="emos.sdk.calculator" priority="10" project:name="Calculator" version="1">
+    <Service name="CalculatorI"/>
+    <Service name="CalculatorII"/>
+    <Property name="strName" type="String"/>
+    <Property name="nID" type="Int"/>
+    <Property name="bFlag" type="Bool"/>
+    <Thread data="500" name="NotifyCalEvent" type="Time"/>
+    <Thread data="500" name="NotifyCalEvent2" type="Time"/>
+    <Thread data="500" name="NotifyCalPin" type="Time"/>
+    <Thread data="500" name="NotifyCalPin2" type="Time"/>
+</emos:idl>

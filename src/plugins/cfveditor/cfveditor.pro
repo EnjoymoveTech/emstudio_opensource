@@ -1,0 +1,70 @@
+include(../../emos_plugin.pri)
+
+DEFINES += MODELING_LIBRARY
+DEFINES += CfvEDITOR_LIBRARY
+
+QT += core gui widgets designer designercomponents-private
+
+isEmpty(QT.svg.name): DEFINES += QT_NO_SVG
+
+include(modelinglib/modelinglib.pri)
+
+SOURCES += \
+    actionhandler.cpp \
+    classviewcontroller.cpp \
+    componentviewcontroller.cpp \
+    diagramsviewmanager.cpp \
+    editordiagramview.cpp \
+    elementtasks.cpp \
+    extdocumentcontroller.cpp \
+    extpropertiesmview.cpp \
+    jsextension.cpp \
+    modeldocument.cpp \
+    modeleditor.cpp \
+    modeleditorfactory.cpp \
+    modeleditor_plugin.cpp \
+    modelindexer.cpp \
+    modelsmanager.cpp \
+    modelutilities.cpp \
+    openelementvisitor.cpp \
+    packageviewcontroller.cpp \
+    pxnodecontroller.cpp \
+    pxnodeutilities.cpp \
+    settingscontroller.cpp \
+    uicontroller.cpp
+
+HEADERS += \
+    actionhandler.h \
+    classviewcontroller.h \
+    componentviewcontroller.h \
+    diagramsviewmanager.h \
+    editordiagramview.h \
+    elementtasks.h \
+    extdocumentcontroller.h \
+    extpropertiesmview.h \
+    jsextension.h \
+    modeldocument.h \
+    modeleditor_constants.h \
+    modeleditorfactory.h \
+    modeleditor_global.h \
+    modeleditor.h \
+    modeleditor_plugin.h \
+    modelindexer.h \
+    modelsmanager.h \
+    modelutilities.h \
+    openelementvisitor.h \
+    packageviewcontroller.h \
+    pxnodecontroller.h \
+    pxnodeutilities.h \
+    settingscontroller.h \
+    uicontroller.h
+
+OTHER_FILES += \
+    CfvEditor.json.in
+
+RESOURCES += \
+    resources/modeleditor.qrc
+
+FORMS +=
+
+DISTFILES +=

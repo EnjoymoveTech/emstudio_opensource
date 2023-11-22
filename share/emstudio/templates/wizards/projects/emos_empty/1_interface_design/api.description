@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<emos:ddl xmlns:emos="emos">
+ <header>
+  <version>1.0</version>
+  <author>EMOS</author>
+  <date_creation>2022-09-20</date_creation>
+  <date_change>2022-09-20</date_change>
+  <description>NULL</description>
+  <typename>type</typename>
+ </header>
+ <services/>
+</emos:ddl>

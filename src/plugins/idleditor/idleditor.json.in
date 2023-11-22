@@ -1,0 +1,23 @@
+{
+    \"Name\" : \"IdlEditor\",
+    \"Version\" : \"$$EMSTUDIO_VERSION\",
+    \"CompatVersion\" : \"$$EMSTUDIO_COMPAT_VERSION\",
+    \"Vendor\" : \"EnjoyMove\",
+    \"Copyright\" : \"(C) EnjoyMove\",
+    \"License\" : \"\",
+    \"Category\" : \"EmStudio\",
+    \"Description\" : \"Editor for idl files.\",
+    \"Url\" : \"http://www.EnjoyMove.com\",
+    $$dependencyList,
+
+    \"Mimetypes\" : [
+        \"<?xml version=\'1.0\'?>\",
+        \"<mime-info xmlns=\'http://www.freedesktop.org/standards/shared-mime-info\'>\",
+        \"    <mime-type type=\'application/emos.idl.xml\'>\",
+        \"        <sub-class-of type=\'text/xml\'/>\",
+        \"        <comment>idl file</comment>\",
+        \"        <glob pattern=\'*.idl\'/>\",
+        \"    </mime-type>\",
+        \"</mime-info>\"
+    ]
+}

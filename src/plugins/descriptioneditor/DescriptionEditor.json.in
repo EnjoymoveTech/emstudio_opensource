@@ -1,0 +1,22 @@
+{
+    \"Name\" : \"DescriptionEditor\",
+    \"Version\" : \"$$EMSTUDIO_VERSION\",
+    \"CompatVersion\" : \"$$EMSTUDIO_VERSION\",
+    \"Vendor\" : \"EnjoyMove\",
+    \"Copyright\" : \"(C) EnjoyMove\",
+    \"License\" : \"\",
+    \"Description\" : \"Emos DescriptionEditor\",
+    \"Url\" : \"https://www.enjoymove.com\",
+    $$dependencyList,
+
+    \"Mimetypes\" : [
+        \"<?xml version=\'1.0\' encoding=\'UTF-8\'?>\",
+        \"<mime-info xmlns=\'http://www.freedesktop.org/standards/shared-mime-info\'>\",
+        \"    <mime-type type=\'application/emos.description.xml\'>\",
+        \"        <sub-class-of type=\'text/xml\'/>\",
+        \"        <comment>Description File</comment>\",
+        \"        <glob pattern=\'*.description\'/>\",
+        \"    </mime-type>\",
+        \"</mime-info>\"
+    ]
+}
